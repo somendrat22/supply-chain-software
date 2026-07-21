@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SupplyChainBaseOperationsApplication {
 
 	public static void main(String[] args) {
-
+        SpringApplication.run(SupplyChainBaseOperationsApplication.class, args);
 	}
-
 }

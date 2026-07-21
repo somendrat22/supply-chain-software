@@ -1,7 +1,22 @@
 package com.supply_chain_easy.supply_chain_base_operations.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+
 import java.math.BigDecimal;
 
+
+@SuperBuilder
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "procurement-companies")
 public class ProcurementCompany extends Company {
     private String procurementCompanyCode;
 

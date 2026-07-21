@@ -2,18 +2,19 @@ package com.supply_chain_easy.supply_chain_base_operations.models;
 
 import com.supply_chain_easy.supply_chain_base_operations.enums.AuthenticationProvider;
 import com.supply_chain_easy.supply_chain_base_operations.enums.UserStatus;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import java.time.Instant;
 import java.util.List;
 
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "users")
 public class User extends GlobalRecord {
     // =========================
