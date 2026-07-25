@@ -18,13 +18,16 @@ public class ProcurementCompanyService {
     private CompanyTransformer companyTransformer;
     private ProcurementCompanyRepository procurementCompanyRepository;
     private CompanyService companyService;
+    private EmailService emailService;
 
     @Autowired
     public ProcurementCompanyService(CompanyTransformer companyTransformer,
                                      ProcurementCompanyRepository procurementCompanyRepository,
-                                     CompanyService companyService){
+                                     CompanyService companyService,
+                                     EmailService emailService){
         this.companyTransformer = companyTransformer;
         this.companyService = companyService;
+        this.emailService = emailService;
         this.procurementCompanyRepository = procurementCompanyRepository;
     }
 
@@ -36,6 +39,9 @@ public class ProcurementCompanyService {
         procurementCompany = procurementCompanyRepository.save(procurementCompany);
         Employee adminEmployee = companyService.createAdminUserForCompany(procurementCompany);
         // Create Admin Role for this company and after creating admin role we need to create admin user for the company
+        // After creation of the employee we should send the email
+        // EmailService -> EmailService
+        emailService.sendRegistrationEmailToProcurementCompany(procurementCompany, adminEmployee);
         return procurementCompany;
     }
 
