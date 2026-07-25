@@ -3,8 +3,10 @@ package com.supply_chain_easy.sourcing_and_procurement_operations.services;
 
 import com.supply_chain_easy.sourcing_and_procurement_operations.dtos.ProcurementCompanyRegistrationDto;
 import com.supply_chain_easy.sourcing_and_procurement_operations.transformers.CompanyTransformer;
+import com.supply_chain_easy.supply_chain_base_operations.models.Employee;
 import com.supply_chain_easy.supply_chain_base_operations.models.ProcurementCompany;
 import com.supply_chain_easy.supply_chain_base_operations.repositories.ProcurementCompanyRepository;
+import com.supply_chain_easy.supply_chain_base_operations.services.CompanyService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,11 +17,14 @@ public class ProcurementCompanyService {
 
     private CompanyTransformer companyTransformer;
     private ProcurementCompanyRepository procurementCompanyRepository;
+    private CompanyService companyService;
 
     @Autowired
     public ProcurementCompanyService(CompanyTransformer companyTransformer,
-                                     ProcurementCompanyRepository procurementCompanyRepository){
+                                     ProcurementCompanyRepository procurementCompanyRepository,
+                                     CompanyService companyService){
         this.companyTransformer = companyTransformer;
+        this.companyService = companyService;
         this.procurementCompanyRepository = procurementCompanyRepository;
     }
 
@@ -29,7 +34,7 @@ public class ProcurementCompanyService {
         ProcurementCompany procurementCompany = companyTransformer.transformProcurementCompanyDtoToModel(procurementCompanyRegistrationDto);
         // Save this object in the table
         procurementCompany = procurementCompanyRepository.save(procurementCompany);
-
+        Employee adminEmployee = companyService.createAdminUserForCompany(procurementCompany);
         // Create Admin Role for this company and after creating admin role we need to create admin user for the company
         return procurementCompany;
     }
