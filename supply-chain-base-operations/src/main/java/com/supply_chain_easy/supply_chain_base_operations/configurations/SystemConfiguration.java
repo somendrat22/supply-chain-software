@@ -9,6 +9,9 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import java.util.Properties;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @Configuration
 public class SystemConfiguration {
@@ -32,6 +35,12 @@ public class SystemConfiguration {
         javaMailSender.setUsername(apiEmailAddress);
         javaMailSender.setPassword(apiEmailPassword);
         return javaMailSender;
+    }
+
+    @Bean
+    public ExecutorService createExecutorService(){
+        ExecutorService executor = Executors.newFixedThreadPool(5);
+        return  executor;
     }
 
 }

@@ -11,6 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.ExecutorService;
+
 @Slf4j
 @Service
 public class ProcurementCompanyService {
@@ -19,16 +21,19 @@ public class ProcurementCompanyService {
     private ProcurementCompanyRepository procurementCompanyRepository;
     private CompanyService companyService;
     private EmailService emailService;
+    private ExecutorService executor;
 
     @Autowired
     public ProcurementCompanyService(CompanyTransformer companyTransformer,
                                      ProcurementCompanyRepository procurementCompanyRepository,
                                      CompanyService companyService,
-                                     EmailService emailService){
+                                     EmailService emailService,
+                                     ExecutorService executorService){
         this.companyTransformer = companyTransformer;
         this.companyService = companyService;
         this.emailService = emailService;
         this.procurementCompanyRepository = procurementCompanyRepository;
+        this.executor = executorService;
     }
 
     public ProcurementCompany onBoardProcurementCompany(ProcurementCompanyRegistrationDto procurementCompanyRegistrationDto){
@@ -41,7 +46,13 @@ public class ProcurementCompanyService {
         // Create Admin Role for this company and after creating admin role we need to create admin user for the company
         // After creation of the employee we should send the email
         // EmailService -> EmailService
-        emailService.sendRegistrationEmailToProcurementCompany(procurementCompany, adminEmployee);
+        ProcurementCompany finalProcurementCompany = procurementCompany;
+        executor.execute( () -> {
+            emailService.sendRegistrationEmailToProcurementCompany(
+                    finalProcurementCompany,
+                    adminEmployee
+            );
+        });
         return procurementCompany;
     }
 
