@@ -4,12 +4,16 @@ import com.supply_chain_easy.supply_chain_base_operations.enums.AuthenticationPr
 import com.supply_chain_easy.supply_chain_base_operations.enums.UserStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.time.Instant;
 import java.util.List;
 
+@Getter
+@Setter
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor

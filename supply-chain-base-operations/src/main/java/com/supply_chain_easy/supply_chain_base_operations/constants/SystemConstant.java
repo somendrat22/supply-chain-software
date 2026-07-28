@@ -3,4 +3,6 @@ package com.supply_chain_easy.supply_chain_base_operations.constants;
 public class SystemConstant {
     public final static Integer DEFAULT_PASSWORD_LENGTH = 10;
     public final static Integer MAIL_RETRY_ATTEMPT = 3;
+    public final static Long JWT_TOKEN_EXPIRATION_TIME = 1_800_000L;
+    public final static String JWT_SECRET_PASSWORD = "bckebckebckbekbcjebcjbfjrbvbrjbjkbcsbcjbejbekbfkefbejfbefbvejfbvejbfjbefjerbf";
 }

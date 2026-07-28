@@ -19,4 +19,8 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
+    public Employee fetchEmployeeByWorkEmail(String email){
+        return employeeRepository.findByWorkEmail(email);
+    }
+
 }
