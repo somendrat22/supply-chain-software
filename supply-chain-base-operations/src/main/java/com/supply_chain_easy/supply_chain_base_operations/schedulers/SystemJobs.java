@@ -117,7 +117,10 @@ public class SystemJobs {
                 Operation.builder().operationId("OP0066").operationName("PICK_ITEMS").operationCategory("WAREHOUSE").build(),
                 Operation.builder().operationId("OP0067").operationName("PACK_ITEMS").operationCategory("WAREHOUSE").build(),
                 Operation.builder().operationId("OP0068").operationName("SHIP_ITEMS").operationCategory("WAREHOUSE").build(),
-                Operation.builder().operationId("OP0069").operationName("RECEIVE_ITEMS").operationCategory("WAREHOUSE").build()
+                Operation.builder().operationId("OP0069").operationName("RECEIVE_ITEMS").operationCategory("WAREHOUSE").build(),
+
+                // System Operation
+                Operation.builder().operationId("OP0070").operationName("CREATE_ROLE").operationCategory("SYSTEM").build()
         );
 
         log.info("Saving operations in DB");

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/v1/procurement-company")
+@RequestMapping("/spo/api/v1/procurement-company")
 public class ProcurementCompanyController {
 
     private ProcurementCompanyService procurementCompanyService;

@@ -14,6 +14,13 @@ public class GlobalExceptionHandler {
     public ResponseEntity handleInvalidCredentialsException(InvalidCredentialsException e){
         HashMap<String, String> message = new HashMap<>();
         message.put("message", e.getMessage());
+        return new ResponseEntity(message, HttpStatus.FORBIDDEN);
+    }
+
+    @ExceptionHandler(value = UnAuthorizedException.class)
+    public ResponseEntity handleUnAuthorizedException(UnAuthorizedException e){
+        HashMap<String, String> message = new HashMap<>();
+        message.put("message", e.getMessage());
         return new ResponseEntity(message, HttpStatus.UNAUTHORIZED);
     }
 

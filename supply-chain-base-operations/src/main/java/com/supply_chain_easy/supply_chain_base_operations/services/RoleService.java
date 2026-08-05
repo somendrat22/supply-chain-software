@@ -1,5 +1,7 @@
 package com.supply_chain_easy.supply_chain_base_operations.services;
 
+import com.supply_chain_easy.supply_chain_base_operations.dtos.CreateRoleRequestDto;
+import com.supply_chain_easy.supply_chain_base_operations.models.Employee;
 import com.supply_chain_easy.supply_chain_base_operations.models.Operation;
 import com.supply_chain_easy.supply_chain_base_operations.models.Role;
 import com.supply_chain_easy.supply_chain_base_operations.repositories.RoleRepository;
@@ -44,5 +46,23 @@ public class RoleService {
                 .build();
         // Save this role to Database
         return roleRepository.save(adminRole);
+    }
+
+    public Role createRole(
+            CreateRoleRequestDto createRoleRequestDto,
+            Employee roleCreatorUser
+    ){
+        // We are getting operationNames so we need to convert operationNames to operation objects
+        List<Operation> operations = operationService.fetchAllOperationsByName(createRoleRequestDto.getOperationNames());
+        Role role = Role.builder()
+                .roleId(SystemUtility.generateId("ROLE"))
+                .roleName(roleCreatorUser.getCompany().getLegalName() + "-" + createRoleRequestDto.getRoleName())
+                .createdAt(LocalDateTime.now())
+                .operations(operations)
+                .updatedAt(LocalDateTime.now())
+                .createdBy(roleCreatorUser.getWorkEmail())
+                .updatedBy(roleCreatorUser.getWorkEmail())
+                .build();
+        return role;
     }
 }

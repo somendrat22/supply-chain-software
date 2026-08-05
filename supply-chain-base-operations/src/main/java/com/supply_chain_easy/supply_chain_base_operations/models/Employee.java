@@ -50,6 +50,9 @@ public class Employee extends User {
     private LocalDate exitDate;
 
     @ManyToOne
+    private Company company;
+
+    @ManyToOne
     private Employee manager;
 
 

@@ -62,6 +62,7 @@ public class SystemTransformer {
                 .officeLocation(company.getRegisteredAddress())
                 .manager(null)
                 .roles(List.of(adminRole))
+                .company(company)
                 .build();
     }
 

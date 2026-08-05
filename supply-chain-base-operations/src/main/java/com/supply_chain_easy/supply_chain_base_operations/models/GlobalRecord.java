@@ -23,7 +23,7 @@ public class GlobalRecord {
     private UUID sysId;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY)
     private List<Attachment> attachments;
     @OneToMany
     private List<Activity> activities;
