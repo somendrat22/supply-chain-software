@@ -41,7 +41,8 @@ public class JwtFilter extends OncePerRequestFilter {
         if(user == null){
             // We need to reject this request
             // When we are calling filterChain.doFilter without setting any kind of quthentication that means we are rejecting the request.
-            filterChain.doFilter(request, response);
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.getWriter().write("Invalid token");
             return;
         }
 

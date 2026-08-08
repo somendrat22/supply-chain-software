@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
@@ -23,7 +24,7 @@ public class GlobalRecord {
     private UUID sysId;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany
     private List<Attachment> attachments;
     @OneToMany
     private List<Activity> activities;

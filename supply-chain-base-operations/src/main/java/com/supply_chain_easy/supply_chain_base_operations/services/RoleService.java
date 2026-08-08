@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -59,6 +60,8 @@ public class RoleService {
                 .roleName(roleCreatorUser.getCompany().getLegalName() + "-" + createRoleRequestDto.getRoleName())
                 .createdAt(LocalDateTime.now())
                 .operations(operations)
+                .attachments(new ArrayList<>())
+                .activities(new ArrayList<>())
                 .updatedAt(LocalDateTime.now())
                 .createdBy(roleCreatorUser.getWorkEmail())
                 .updatedBy(roleCreatorUser.getWorkEmail())
