@@ -19,6 +19,8 @@ public class Attachment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID sysId;
+    @ManyToOne
+    private GlobalRecord globalRecord;
     private String attachmentLink;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

@@ -19,6 +19,8 @@ public class Activity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID sysId;
+    @ManyToOne
+    private GlobalRecord globalRecord;
     private String comment;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

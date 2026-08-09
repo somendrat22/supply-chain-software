@@ -24,10 +24,6 @@ public class GlobalRecord {
     private UUID sysId;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    @OneToMany
-    private List<Attachment> attachments;
-    @OneToMany
-    private List<Activity> activities;
     private String createdBy;
     private String updatedBy;
 }
