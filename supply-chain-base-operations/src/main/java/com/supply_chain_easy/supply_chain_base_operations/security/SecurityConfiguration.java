@@ -29,7 +29,8 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/spo/api/v1/emp/login",
-                                "/spo/api/v1/procurement-company/on-board"
+                                "/spo/api/v1/procurement-company/on-board",
+                                "/spo/api/v1/role/create"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )

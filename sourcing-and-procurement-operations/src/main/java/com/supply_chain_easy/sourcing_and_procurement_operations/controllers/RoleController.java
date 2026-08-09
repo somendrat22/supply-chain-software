@@ -1,4 +1,4 @@
-package com.supply_chain_easy.supply_chain_base_operations.controllers;
+package com.supply_chain_easy.sourcing_and_procurement_operations.controllers;
 
 import com.supply_chain_easy.supply_chain_base_operations.dtos.CreateRoleRequestDto;
 import com.supply_chain_easy.supply_chain_base_operations.models.Employee;
@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/base/api/role")
+@RequestMapping("/spo/api/v1/role")
 public class RoleController {
 
     private AuthService authService;
