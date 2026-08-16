@@ -1,4 +1,4 @@
-const API_BASE_URL = "";
+const API_BASE_URL = "http://localhost:8080";
 
 const ONBOARDING_ENDPOINT =
     "/spo/api/v1/procurement-company/on-board";
