@@ -6,6 +6,7 @@ import com.supply_chain_easy.supply_chain_base_operations.models.Role;
 import com.supply_chain_easy.supply_chain_base_operations.models.User;
 import com.supply_chain_easy.supply_chain_base_operations.services.EmployeeService;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,11 +53,12 @@ public class JwtUtility {
                 .getBody();
     }
 
-    public User verifyJwtToken(String token){
-        // 1. To verify token first we need to decrypt the token and get the claims in the token
-        Claims claims = this.extractAllClaims(token);
-        String email = claims.get("email", String.class);
-        return employeeService.fetchEmployeeByWorkEmail(email);
+    public Claims verifyJwtToken(String token) {
+        try {
+          return extractAllClaims(token);
+        } catch (JwtException | IllegalArgumentException e) {
+            return null;
+        }
     }
 
 }
