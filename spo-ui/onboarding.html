@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Procurement Company Onboarding | Sourcing & Procurement</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/onboarding.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="topbar">
+
+        <a href="index.html" class="brand">
+
+            <span class="brand-mark">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+
+            <span>
+                Sourcing
+                <strong>&amp;</strong>
+                Procurement
+            </span>
+
+        </a>
+
+        <a href="index.html" class="back-link">
+            ← Back to home
+        </a>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="onboarding-page">
+
+        <section class="intro">
+
+            <span class="eyebrow">
+                PROCUREMENT COMPANY SETUP
+            </span>
+
+            <h1>
+                Set up your
+                <span>procurement company.</span>
+            </h1>
+
+            <p>
+                Complete the information below to establish your
+                procurement organization and configure its operating
+                controls.
+            </p>
+
+        </section>
+
+
+        <!-- ================= PROGRESS ================= -->
+
+        <div class="progress" id="progress">
+
+            <div class="progress-step active">
+                <span>01</span>
+                <small>Procurement</small>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <span>02</span>
+                <small>Company</small>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <span>03</span>
+                <small>Business</small>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <span>04</span>
+                <small>Contact</small>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <span>05</span>
+                <small>Review</small>
+            </div>
+
+        </div>
+
+
+        <!-- ================= FORM ================= -->
+
+        <form id="onboardingForm" novalidate>
+
+
+            <!-- ================= STEP 1 ================= -->
+
+            <section
+                class="form-step active"
+                data-step="1"
+            >
+
+                <div class="card-heading">
+
+                    <span class="step-label">
+                        01 / 05
+                    </span>
+
+                    <h2>
+                        Procurement setup
+                    </h2>
+
+                    <p>
+                        Define how your organization manages
+                        procurement.
+                    </p>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <label>
+                        Procurement company code
+
+                        <input
+                            name="procurementCompanyCode"
+                            required
+                            placeholder="e.g. ACME-PROC-2026"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        Procurement model
+
+                        <select
+                            name="procurementModel"
+                            required
+                        >
+
+                            <option value="">
+                                Select model
+                            </option>
+
+                            <option value="CENTRALIZED">
+                                Centralized
+                            </option>
+
+                            <option value="DECENTRALIZED">
+                                Decentralized
+                            </option>
+
+                            <option value="HYBRID">
+                                Hybrid
+                            </option>
+
+                        </select>
+
+                    </label>
+
+
+                    <label>
+                        Procurement strategy
+
+                        <select
+                            name="procurementStrategy"
+                            required
+                        >
+
+                            <option value="">
+                                Select strategy
+                            </option>
+
+                            <option value="STRATEGIC_SOURCING">
+                                Strategic Sourcing
+                            </option>
+
+                            <option value="CATEGORY_MANAGEMENT">
+                                Category Management
+                            </option>
+
+                            <option value="TACTICAL_BUYING">
+                                Tactical Buying
+                            </option>
+
+                        </select>
+
+                    </label>
+
+
+                    <label>
+                        Default currency
+
+                        <select
+                            name="defaultCurrency"
+                            required
+                        >
+
+                            <option value="INR">
+                                INR - Indian Rupee
+                            </option>
+
+                            <option value="USD">
+                                USD - US Dollar
+                            </option>
+
+                            <option value="EUR">
+                                EUR - Euro
+                            </option>
+
+                            <option value="GBP">
+                                GBP - British Pound
+                            </option>
+
+                        </select>
+
+                    </label>
+
+
+                    <label>
+                        Annual procurement budget
+
+                        <div class="input-prefix">
+                            <span>₹</span>
+
+                            <input
+                                name="annualProcurementBudget"
+                                type="number"
+                                min="0"
+                                step="0.01"
+                                placeholder="0.00"
+                            >
+                        </div>
+
+                    </label>
+
+
+                    <label>
+                        Annual procurement spend
+
+                        <div class="input-prefix">
+                            <span>₹</span>
+
+                            <input
+                                name="annualProcurementSpend"
+                                type="number"
+                                min="0"
+                                step="0.01"
+                                placeholder="0.00"
+                            >
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+                <div class="control-section">
+
+                    <div class="control-heading">
+
+                        <div>
+                            <h3>
+                                Procurement controls
+                            </h3>
+
+                            <p>
+                                Configure mandatory procurement
+                                policies for this organization.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="control-grid">
+
+                        <label class="toggle">
+
+                            <input
+                                type="checkbox"
+                                name="budgetControlEnabled"
+                                checked
+                            >
+
+                            <span class="toggle-switch"></span>
+
+                            <span>
+                                Budget control
+                            </span>
+
+                        </label>
+
+
+                        <label class="toggle">
+
+                            <input
+                                type="checkbox"
+                                name="purchaseRequisitionRequired"
+                                checked
+                            >
+
+                            <span class="toggle-switch"></span>
+
+                            <span>
+                                Purchase requisition required
+                            </span>
+
+                        </label>
+
+
+                        <label class="toggle">
+
+                            <input
+                                type="checkbox"
+                                name="purchaseOrderRequired"
+                                checked
+                            >
+
+                            <span class="toggle-switch"></span>
+
+                            <span>
+                                Purchase order required
+                            </span>
+
+                        </label>
+
+
+                        <label class="toggle">
+
+                            <input
+                                type="checkbox"
+                                name="sourcingRequired"
+                                checked
+                            >
+
+                            <span class="toggle-switch"></span>
+
+                            <span>
+                                Sourcing required
+                            </span>
+
+                        </label>
+
+
+                        <label class="toggle">
+
+                            <input
+                                type="checkbox"
+                                name="contractRequired"
+                                checked
+                            >
+
+                            <span class="toggle-switch"></span>
+
+                            <span>
+                                Contract required
+                            </span>
+
+                        </label>
+
+
+                        <label class="toggle">
+
+                            <input
+                                type="checkbox"
+                                name="supplierApprovalRequired"
+                                checked
+                            >
+
+                            <span class="toggle-switch"></span>
+
+                            <span>
+                                Supplier approval required
+                            </span>
+
+                        </label>
+
+
+                        <label class="toggle">
+
+                            <input
+                                type="checkbox"
+                                name="multiLevelApprovalEnabled"
+                                checked
+                            >
+
+                            <span class="toggle-switch"></span>
+
+                            <span>
+                                Multi-level approval
+                            </span>
+
+                        </label>
+
+
+                        <label class="toggle">
+
+                            <input
+                                type="checkbox"
+                                name="threeWayMatchingEnabled"
+                                checked
+                            >
+
+                            <span class="toggle-switch"></span>
+
+                            <span>
+                                Three-way matching
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STEP 2 ================= -->
+
+            <section
+                class="form-step"
+                data-step="2"
+            >
+
+                <div class="card-heading">
+
+                    <span class="step-label">
+                        02 / 05
+                    </span>
+
+                    <h2>
+                        Company information
+                    </h2>
+
+                    <p>
+                        Tell us about the legal entity being
+                        onboarded.
+                    </p>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <label>
+                        Legal name
+
+                        <input
+                            name="legalName"
+                            required
+                            placeholder="Registered legal name"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        Display name
+
+                        <input
+                            name="displayName"
+                            required
+                            placeholder="Name shown in the application"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        Company code
+
+                        <input
+                            name="companyCode"
+                            required
+                            placeholder="e.g. ACME001"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        Registration number
+
+                        <input
+                            name="registrationNumber"
+                            required
+                            placeholder="Company registration number"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        Company type
+
+                        <select
+                            name="companyType"
+                            required
+                        >
+
+                            <option value="">
+                                Select company type
+                            </option>
+
+                            <option value="PROCUREMENT_COMPANY">
+                                Procurement Company
+                            </option>
+
+                        </select>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STEP 3 ================= -->
+
+            <section
+                class="form-step"
+                data-step="3"
+            >
+
+                <div class="card-heading">
+
+                    <span class="step-label">
+                        03 / 05
+                    </span>
+
+                    <h2>
+                        Business information
+                    </h2>
+
+                    <p>
+                        Add your organization's business profile.
+                    </p>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <label>
+                        Industry
+
+                        <input
+                            name="industry"
+                            required
+                            placeholder="e.g. Manufacturing & Logistics"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        Website
+
+                        <input
+                            name="website"
+                            type="url"
+                            placeholder="https://example.com"
+                        >
+
+                    </label>
+
+
+                    <label class="full">
+
+                        Business description
+
+                        <textarea
+                            name="businessDescription"
+                            required
+                            rows="7"
+                            placeholder="Describe your business and procurement operations..."
+                        ></textarea>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STEP 4 ================= -->
+
+            <section
+                class="form-step"
+                data-step="4"
+            >
+
+                <div class="card-heading">
+
+                    <span class="step-label">
+                        04 / 05
+                    </span>
+
+                    <h2>
+                        Contact &amp; legal
+                    </h2>
+
+                    <p>
+                        Provide official contact and tax information.
+                    </p>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <label>
+                        Email
+
+                        <input
+                            name="email"
+                            type="email"
+                            required
+                            placeholder="procurement@example.com"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        Phone number
+
+                        <input
+                            name="phoneNumber"
+                            type="tel"
+                            required
+                            placeholder="+91 98765 43210"
+                        >
+
+                    </label>
+
+
+                    <label class="full">
+
+                        Registered address
+
+                        <textarea
+                            name="registeredAddress"
+                            required
+                            rows="4"
+                            placeholder="Complete registered address"
+                        ></textarea>
+
+                    </label>
+
+
+                    <label>
+                        Tax identification number
+
+                        <input
+                            name="taxIdentificationNumber"
+                            placeholder="Tax identification number"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        VAT number
+
+                        <input
+                            name="vatNumber"
+                            placeholder="VAT number"
+                        >
+
+                    </label>
+
+
+                    <label>
+                        GST number
+
+                        <input
+                            name="gstNumber"
+                            placeholder="GST number"
+                        >
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STEP 5 ================= -->
+
+            <section
+                class="form-step"
+                data-step="5"
+            >
+
+                <div class="card-heading">
+
+                    <span class="step-label">
+                        05 / 05
+                    </span>
+
+                    <h2>
+                        Review &amp; submit
+                    </h2>
+
+                    <p>
+                        Review the information before creating
+                        the procurement company.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="review"
+                    class="review-grid"
+                ></div>
+
+
+                <div
+                    id="submitError"
+                    class="error-banner hidden"
+                ></div>
+
+            </section>
+
+
+            <!-- ================= ACTIONS ================= -->
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    id="previousBtn"
+                    class="button secondary hidden"
+                >
+                    ← Previous
+                </button>
+
+                <span class="actions-spacer"></span>
+
+                <button
+                    type="button"
+                    id="nextBtn"
+                    class="button primary"
+                >
+                    Continue →
+                </button>
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                    class="button primary hidden"
+                >
+                    Create procurement company
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+</div>
+
+
+<script src="js/onboarding.js"></script>
+
+</body>
+</html>
