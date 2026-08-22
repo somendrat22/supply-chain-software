@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Sourcing & Procurement settings"
+    >
+
+    <title>Settings | Sourcing & Procurement</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/settings.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <a
+                href="dashboard.html"
+                class="dashboard-logo">
+
+                <span class="logo-icon">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <span>
+                    Sourcing
+                    <strong>&amp;</strong>
+                    Procurement
+                </span>
+
+            </a>
+
+
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close navigation">
+
+                ×
+
+            </button>
+
+
+            <nav class="sidebar-nav">
+
+
+                <!-- =================================================
+                     WORKSPACE
+                     ================================================= -->
+
+                <div class="nav-section">
+
+                    <span class="nav-section-title">
+                        WORKSPACE
+                    </span>
+
+
+                    <a
+                        href="dashboard.html"
+                        class="sidebar-link">
+
+                        <span class="sidebar-icon">⌂</span>
+
+                        <span>Overview</span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_RFQ">
+
+                        <span class="sidebar-icon">↗</span>
+
+                        <span>Sourcing &amp; RFQ</span>
+
+                        <span class="nav-count">
+                            8
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_SUPPLIER">
+
+                        <span class="sidebar-icon">◎</span>
+
+                        <span>Suppliers</span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_PURCHASE_ORDER">
+
+                        <span class="sidebar-icon">▣</span>
+
+                        <span>Purchase Orders</span>
+
+                        <span class="nav-count warning">
+                            12
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_PURCHASE_REQUISITION">
+
+                        <span class="sidebar-icon">◫</span>
+
+                        <span>Requisitions</span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                     MANAGEMENT
+                     ================================================= -->
+
+                <div class="nav-section">
+
+                    <span class="nav-section-title">
+                        MANAGEMENT
+                    </span>
+
+
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_SPEND_ANALYTICS">
+
+                        <span class="sidebar-icon">◈</span>
+
+                        <span>Spend Analytics</span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_CONTRACT">
+
+                        <span class="sidebar-icon">⌁</span>
+
+                        <span>Contracts</span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_APPROVALS">
+
+                        <span class="sidebar-icon">✓</span>
+
+                        <span>Approvals</span>
+
+                        <span class="nav-count">
+                            27
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_REPORTS">
+
+                        <span class="sidebar-icon">▤</span>
+
+                        <span>Reports</span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                     ADMINISTRATION
+                     ================================================= -->
+
+                <div class="nav-section">
+
+                    <span class="nav-section-title">
+                        ADMINISTRATION
+                    </span>
+
+
+                    <a
+                        href="settings.html"
+                        class="sidebar-link active permission-item"
+                        data-operation="VIEW_SETTINGS">
+
+                        <span class="sidebar-icon">⚙</span>
+
+                        <span>Settings</span>
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- =====================================================
+             USER
+             ===================================================== -->
+
+        <div class="sidebar-user">
+
+            <div
+                class="user-avatar"
+                id="sidebarUserAvatar">
+
+                ST
+
+            </div>
+
+
+            <div class="user-details">
+
+                <strong id="sidebarUserName">
+                    Somendra Tiwari
+                </strong>
+
+                <span id="sidebarUserRole">
+                    Procurement Manager
+                </span>
+
+            </div>
+
+
+            <button
+                id="sidebarLogout"
+                class="logout-button"
+                title="Sign out">
+
+                ↪
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN AREA
+         ===================================================== -->
+
+    <div class="main-area">
+
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <button
+                    id="sidebarToggle"
+                    class="sidebar-toggle"
+                    aria-label="Open navigation">
+
+                    ☰
+
+                </button>
+
+
+                <div>
+
+                    <span class="breadcrumb">
+                        Administration / Settings
+                    </span>
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button
+                    class="header-action"
+                    title="Search">
+
+                    ⌕
+
+                </button>
+
+
+                <button
+                    class="header-action notification-button"
+                    id="notificationButton"
+                    title="Notifications">
+
+                    ♧
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-divider"></div>
+
+
+                <button
+                    class="profile-button"
+                    id="profileButton">
+
+                    <span
+                        class="profile-avatar"
+                        id="profileAvatar">
+
+                        ST
+
+                    </span>
+
+
+                    <span
+                        class="profile-name"
+                        id="profileName">
+
+                        Somendra
+
+                    </span>
+
+
+                    <span class="profile-arrow">
+                        ⌄
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             SETTINGS CONTENT
+             ================================================= -->
+
+        <main class="dashboard-content settings-content">
+
+
+            <!-- =================================================
+                 PAGE INTRO
+                 ================================================= -->
+
+            <section class="welcome-section settings-welcome">
+
+                <div>
+
+                    <span class="welcome-label">
+                        ADMINISTRATION
+                    </span>
+
+                    <h2>
+                        Configure your workspace.
+                    </h2>
+
+                    <p>
+                        Manage roles, access, users and
+                        procurement platform settings.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACCESS MANAGEMENT
+                 ================================================= -->
+
+            <section class="settings-section">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span>
+                            ACCESS MANAGEMENT
+                        </span>
+
+                        <h3>
+                            Roles &amp; permissions
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+
+                    <!-- ROLE MANAGEMENT -->
+
+                    <a
+                        href="create-role.html"
+                        class="settings-card"
+                        data-operation="CREATE_ROLE">
+
+                        <div class="settings-card-icon teal">
+                            ◈
+                        </div>
+
+                        <div class="settings-card-content">
+
+                            <span class="settings-card-label">
+                                ACCESS CONTROL
+                            </span>
+
+                            <h3>
+                                Role Management
+                            </h3>
+
+                            <p>
+                                Create and manage roles and
+                                assign operations to users.
+                            </p>
+
+                            <span class="settings-card-link">
+                                Manage roles →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- OPERATIONS -->
+
+                    <a
+                        href="operations.html"
+                        class="settings-card"
+                        data-operation="VIEW_ALL_OPERATIONS">
+
+                        <div class="settings-card-icon blue">
+                            ◇
+                        </div>
+
+                        <div class="settings-card-content">
+
+                            <span class="settings-card-label">
+                                PERMISSIONS
+                            </span>
+
+                            <h3>
+                                Operations
+                            </h3>
+
+                            <p>
+                                View and manage operations
+                                available across the platform.
+                            </p>
+
+                            <span class="settings-card-link">
+                                View operations →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- USER ACCESS -->
+
+                    <a
+                        href="#"
+                        class="settings-card"
+                        data-operation="MANAGE_USERS">
+
+                        <div class="settings-card-icon purple">
+                            ◎
+                        </div>
+
+                        <div class="settings-card-content">
+
+                            <span class="settings-card-label">
+                                USER ACCESS
+                            </span>
+
+                            <h3>
+                                User Access
+                            </h3>
+
+                            <p>
+                                Manage employees and assign
+                                roles to users.
+                            </p>
+
+                            <span class="settings-card-link">
+                                Manage users →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- SECURITY -->
+
+                    <a
+                        href="#"
+                        class="settings-card"
+                        data-operation="MANAGE_SECURITY">
+
+                        <div class="settings-card-icon gold">
+                            ✓
+                        </div>
+
+                        <div class="settings-card-content">
+
+                            <span class="settings-card-label">
+                                SECURITY
+                            </span>
+
+                            <h3>
+                                Security
+                            </h3>
+
+                            <p>
+                                Configure authentication and
+                                access security settings.
+                            </p>
+
+                            <span class="settings-card-link">
+                                Configure →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SYSTEM SETTINGS
+                 ================================================= -->
+
+            <section class="settings-section">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span>
+                            SYSTEM
+                        </span>
+
+                        <h3>
+                            General settings
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="system-settings-card">
+
+
+                    <div class="system-setting-row">
+
+                        <div class="system-setting-icon">
+                            ⚙
+                        </div>
+
+
+                        <div class="system-setting-info">
+
+                            <strong>
+                                Organization settings
+                            </strong>
+
+                            <span>
+                                Configure organization information
+                                and procurement defaults.
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="settings-action-button">
+
+                            Configure →
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="system-setting-divider"></div>
+
+
+                    <div class="system-setting-row">
+
+                        <div class="system-setting-icon">
+                            ♧
+                        </div>
+
+
+                        <div class="system-setting-info">
+
+                            <strong>
+                                Notification settings
+                            </strong>
+
+                            <span>
+                                Manage approval and procurement
+                                notification preferences.
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="settings-action-button">
+
+                            Configure →
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="system-setting-divider"></div>
+
+
+                    <div class="system-setting-row">
+
+                        <div class="system-setting-icon">
+                            ◇
+                        </div>
+
+
+                        <div class="system-setting-info">
+
+                            <strong>
+                                Procurement configuration
+                            </strong>
+
+                            <span>
+                                Configure procurement workflows,
+                                approvals and defaults.
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="settings-action-button">
+
+                            Configure →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <footer class="dashboard-footer">
+
+            <span>
+                Sourcing &amp; Procurement
+            </span>
+
+            <span>
+                © 2026
+            </span>
+
+        </footer>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+     ===================================================== -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay">
+</div>
+
+
+
+<script src="js/settings.js"></script>
+
+</body>
+
+</html>

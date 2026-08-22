@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Application operations"
+    >
+
+    <title>Operations | Sourcing & Procurement</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/operations.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <a href="dashboard.html" class="dashboard-logo">
+
+                <span class="logo-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <span>
+                    Sourcing
+                    <strong>&amp;</strong>
+                    Procurement
+                </span>
+
+            </a>
+
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close navigation">
+                ×
+            </button>
+
+            <nav class="sidebar-nav">
+
+                <div class="nav-section">
+
+                    <span class="nav-section-title">
+                        WORKSPACE
+                    </span>
+
+                    <a
+                        href="dashboard.html"
+                        class="sidebar-link">
+
+                        <span class="sidebar-icon">⌂</span>
+                        <span>Overview</span>
+
+                    </a>
+
+                </div>
+
+                <div class="nav-section">
+
+                    <span class="nav-section-title">
+                        ADMINISTRATION
+                    </span>
+
+                    <a
+                        href="settings.html"
+                        class="sidebar-link active">
+
+                        <span class="sidebar-icon">⚙</span>
+                        <span>Settings</span>
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+        <div class="sidebar-user">
+
+            <div class="user-avatar" id="sidebarUserAvatar">
+                ST
+            </div>
+
+            <div class="user-details">
+
+                <strong id="sidebarUserName">
+                    Somendra Tiwari
+                </strong>
+
+                <span id="sidebarUserRole">
+                    Procurement Manager
+                </span>
+
+            </div>
+
+            <button
+                id="sidebarLogout"
+                class="logout-button"
+                title="Sign out">
+                ↪
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN AREA -->
+
+    <div class="main-area">
+
+        <!-- HEADER -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <button
+                    id="sidebarToggle"
+                    class="sidebar-toggle"
+                    aria-label="Open navigation">
+                    ☰
+                </button>
+
+                <div>
+
+                    <span class="breadcrumb">
+                        Settings / Operations
+                    </span>
+
+                    <h1>
+                        Operations
+                    </h1>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <main class="dashboard-content">
+
+            <section class="operations-page">
+
+                <div class="operations-page-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            PERMISSIONS
+                        </span>
+
+                        <h2>
+                            Application operations
+                        </h2>
+
+                        <p>
+                            View all operations available
+                            across the platform.
+                        </p>
+
+                    </div>
+
+                    <div class="operations-count">
+                        <strong id="operationCount">
+                            0
+                        </strong>
+
+                        <span>
+                            operations
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- ERROR -->
+
+                <div
+                    id="operationsError"
+                    class="operations-message error"
+                    style="display: none;">
+                </div>
+
+
+                <!-- LOADING -->
+
+                <div
+                    id="operationsLoading"
+                    class="operations-message">
+
+                    Loading operations...
+
+                </div>
+
+
+                <!-- OPERATIONS -->
+
+                <div
+                    id="operationsContainer"
+                    class="operations-container"
+                    style="display: none;">
+
+                    <div class="operations-table-wrapper">
+
+                        <table class="operations-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Operation ID
+                                    </th>
+
+                                    <th>
+                                        Operation Name
+                                    </th>
+
+                                    <th>
+                                        Category
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="operationsTableBody">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer class="dashboard-footer">
+
+            <span>
+                Sourcing &amp; Procurement
+            </span>
+
+            <span>
+                © 2026
+            </span>
+
+        </footer>
+
+    </div>
+
+</div>
+
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay">
+</div>
+
+
+<script src="js/operations.js"></script>
+
+</body>
+
+</html>
