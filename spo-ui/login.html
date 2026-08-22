@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Login | Sourcing & Procurement</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<header class="login-header">
+    <div class="login-navbar">
+
+        <a href="index.html" class="brand">
+            <span class="brand-mark">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+
+            <span>
+                Sourcing <strong>&amp;</strong> Procurement
+            </span>
+        </a>
+
+        <a href="index.html" class="back-link">
+            ← Back to platform
+        </a>
+
+    </div>
+</header>
+
+
+<main class="login-page">
+
+    <section class="login-intro">
+
+        <div class="login-eyebrow">
+            <span class="eyebrow-dot"></span>
+            Employee Portal
+        </div>
+
+        <h1>
+            Welcome<br>
+            <span>back.</span>
+        </h1>
+
+        <p>
+            Sign in to access your procurement workspace,
+            manage sourcing activities, collaborate with
+            suppliers and keep purchasing operations moving.
+        </p>
+
+        <div class="login-features">
+
+            <div class="login-feature">
+                <span class="feature-icon">↗</span>
+                <span>Sourcing &amp; RFQ</span>
+            </div>
+
+            <div class="login-feature">
+                <span class="feature-icon">◎</span>
+                <span>Supplier management</span>
+            </div>
+
+            <div class="login-feature">
+                <span class="feature-icon">▣</span>
+                <span>Purchase operations</span>
+            </div>
+
+            <div class="login-feature">
+                <span class="feature-icon">◈</span>
+                <span>Spend intelligence</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="login-card">
+
+        <div class="login-card-header">
+            <h2>Employee sign in</h2>
+
+            <p>
+                Enter your employee credentials to continue.
+            </p>
+        </div>
+
+
+        <div
+            id="loginError"
+            class="login-error"
+            role="alert">
+        </div>
+
+
+        <form id="loginForm">
+
+            <div class="form-field">
+
+                <label for="email">
+                    Work email
+                </label>
+
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@company.com"
+                    autocomplete="username"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="password-field">
+
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        id="togglePassword"
+                        class="password-toggle">
+                        Show
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="login-options">
+
+                <label class="remember-me">
+
+                    <input
+                        type="checkbox"
+                        id="rememberMe"
+                    >
+
+                    <span>Remember me</span>
+
+                </label>
+
+                <a
+                    href="#"
+                    id="forgotPassword"
+                    class="forgot-password">
+                    Forgot password?
+                </a>
+
+            </div>
+
+
+            <div
+                id="loginError"
+                class="login-error">
+            </div>
+
+
+            <button
+                type="submit"
+                id="loginButton"
+                class="login-button">
+
+                <span id="loginButtonText">
+                    Sign in
+                </span>
+
+            </button>
+
+        </form>
+
+
+        <div class="security-message">
+            <span>●</span>
+            Your connection is secure
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="login-footer">
+    © 2026 Sourcing &amp; Procurement Application
+</footer>
+
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
