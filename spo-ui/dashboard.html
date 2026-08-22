@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Sourcing & Procurement employee dashboard"
+    >
+
+    <title>Dashboard | Sourcing & Procurement</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <a href="dashboard.html" class="dashboard-logo">
+
+                <span class="logo-icon">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <span>
+                    Sourcing
+                    <strong>&amp;</strong>
+                    Procurement
+                </span>
+
+            </a>
+
+
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close navigation">
+                ×
+            </button>
+
+
+            <nav class="sidebar-nav">
+
+                <!-- =================================================
+                    WORKSPACE
+                    ================================================= -->
+
+                <div class="nav-section">
+
+                    <span class="nav-section-title">
+                        WORKSPACE
+                    </span>
+
+
+                    <!-- Overview - Everyone who can access dashboard -->
+                    <a
+                        href="dashboard.html"
+                        class="sidebar-link active">
+
+                        <span class="sidebar-icon">⌂</span>
+
+                        <span>Overview</span>
+
+                    </a>
+
+
+                    <!-- Sourcing & RFQ -->
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_RFQ">
+
+                        <span class="sidebar-icon">↗</span>
+
+                        <span>Sourcing &amp; RFQ</span>
+
+                        <span class="nav-count">8</span>
+
+                    </a>
+
+
+                    <!-- Suppliers -->
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_SUPPLIER">
+
+                        <span class="sidebar-icon">◎</span>
+
+                        <span>Suppliers</span>
+
+                    </a>
+
+
+                    <!-- Purchase Orders -->
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_PURCHASE_ORDER">
+
+                        <span class="sidebar-icon">▣</span>
+
+                        <span>Purchase Orders</span>
+
+                        <span class="nav-count warning">
+                            12
+                        </span>
+
+                    </a>
+
+
+                    <!-- Requisitions -->
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_PURCHASE_REQUISITION">
+
+                        <span class="sidebar-icon">◫</span>
+
+                        <span>Requisitions</span>
+
+                    </a>
+
+                    <!-- Create Role -->
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="CREATE_ROLE">
+
+                        <span class="sidebar-icon">+</span>
+
+                        <span>Create Role</span>
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                    MANAGEMENT
+                    ================================================= -->
+
+                <div class="nav-section">
+
+                    <span class="nav-section-title">
+                        MANAGEMENT
+                    </span>
+
+
+                    <!-- Spend Analytics -->
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_SPEND_ANALYTICS">
+
+                        <span class="sidebar-icon">◈</span>
+
+                        <span>Spend Analytics</span>
+
+                    </a>
+
+
+                    <!-- Contracts -->
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_CONTRACT">
+
+                        <span class="sidebar-icon">⌁</span>
+
+                        <span>Contracts</span>
+
+                    </a>
+
+
+                    <!-- Approvals -->
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_APPROVALS">
+
+                        <span class="sidebar-icon">✓</span>
+
+                        <span>Approvals</span>
+
+                        <span class="nav-count">
+                            27
+                        </span>
+
+                    </a>
+
+
+                    <!-- Reports -->
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        data-operation="VIEW_REPORTS">
+
+                        <span class="sidebar-icon">▤</span>
+
+                        <span>Reports</span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                    ADMINISTRATION
+                    ================================================= -->
+
+                <div class="nav-section">
+
+                    <span class="nav-section-title">
+                        ADMINISTRATION
+                    </span>
+
+
+                    <!-- Settings -->
+                    <a
+                        href="#"
+                        class="sidebar-link permission-item"
+                        >
+
+                        <span class="sidebar-icon">⚙</span>
+
+                        <span>Settings</span>
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- USER -->
+
+        <div class="sidebar-user">
+
+            <div class="user-avatar">
+                ST
+            </div>
+
+            <div class="user-details">
+
+                <strong id="sidebarUserName">
+                    Somendra Tiwari
+                </strong>
+
+                <span id="sidebarUserRole">
+                    Procurement Manager
+                </span>
+
+            </div>
+
+            <button
+                id="sidebarLogout"
+                class="logout-button"
+                title="Sign out">
+                ↪
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN AREA
+         ===================================================== -->
+
+    <div class="main-area">
+
+
+        <!-- =================================================
+             TOPBAR
+             ================================================= -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <button
+                    id="sidebarToggle"
+                    class="sidebar-toggle"
+                    aria-label="Open navigation">
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <span class="breadcrumb">
+                        Workspace / Overview
+                    </span>
+
+                    <h1>
+                        Procurement overview
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button
+                    class="header-action"
+                    title="Search">
+                    ⌕
+                </button>
+
+
+                <button
+                    class="header-action notification-button"
+                    id="notificationButton"
+                    title="Notifications">
+
+                    ♧
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-divider"></div>
+
+
+                <button
+                    class="profile-button"
+                    id="profileButton">
+
+                    <span class="profile-avatar" id="profileAvatar">
+                        ST
+                    </span>
+
+                    <span class="profile-name" id="profileName">
+                        Somendra
+                    </span>
+
+                    <span class="profile-arrow">
+                       ⌄
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTENT
+             ================================================= -->
+
+        <main class="dashboard-content">
+
+
+            <!-- =============================================
+                 WELCOME
+                 ============================================= -->
+
+            <section class="welcome-section">
+
+                <div>
+
+                    <span class="welcome-label">
+                        SATURDAY, AUGUST 22, 2026
+                    </span>
+
+                    <h2>
+                        Good afternoon, <span id="welcomeUserName"></span>.
+                    </h2>
+
+                    <p>
+                        Here's what's happening across your
+                        procurement operations today.
+                    </p>
+
+                </div>
+
+
+                <div class="welcome-actions">
+
+                    <button class="button secondary">
+                        Export report
+                        <span>↓</span>
+                    </button>
+
+                    <button class="button primary">
+                        + Create request
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 KPI CARDS
+                 ============================================= -->
+
+            <section class="kpi-grid">
+
+
+                <article class="kpi-card">
+
+                    <div class="kpi-top">
+
+                        <span class="kpi-label">
+                            TOTAL SPEND
+                        </span>
+
+                        <span class="kpi-icon teal">
+                            ◈
+                        </span>
+
+                    </div>
+
+                    <strong class="kpi-value">
+                        ₹68.95Cr
+                    </strong>
+
+                    <div class="kpi-footer">
+
+                        <span class="positive">
+                            ↗ 8.4%
+                        </span>
+
+                        <span>
+                            vs last year
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="kpi-card">
+
+                    <div class="kpi-top">
+
+                        <span class="kpi-label">
+                            ACTIVE SUPPLIERS
+                        </span>
+
+                        <span class="kpi-icon blue">
+                            ◎
+                        </span>
+
+                    </div>
+
+                    <strong class="kpi-value">
+                        1,284
+                    </strong>
+
+                    <div class="kpi-footer">
+
+                        <span class="positive">
+                            +42
+                        </span>
+
+                        <span>
+                            this month
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="kpi-card">
+
+                    <div class="kpi-top">
+
+                        <span class="kpi-label">
+                            SAVINGS ACHIEVED
+                        </span>
+
+                        <span class="kpi-icon gold">
+                            ↗
+                        </span>
+
+                    </div>
+
+                    <strong class="kpi-value">
+                        ₹4.82Cr
+                    </strong>
+
+                    <div class="kpi-footer">
+
+                        <span class="positive">
+                            12.6%
+                        </span>
+
+                        <span>
+                            of addressable spend
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="kpi-card">
+
+                    <div class="kpi-top">
+
+                        <span class="kpi-label">
+                            PENDING APPROVALS
+                        </span>
+
+                        <span class="kpi-icon purple">
+                            ✓
+                        </span>
+
+                    </div>
+
+                    <strong class="kpi-value">
+                        27
+                    </strong>
+
+                    <div class="kpi-footer">
+
+                        <span class="attention">
+                            8 urgent
+                        </span>
+
+                        <span>
+                            requiring action
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =============================================
+                 MAIN GRID
+                 ============================================= -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- SPEND CHART -->
+
+                <article class="dashboard-card spend-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                SPEND PERFORMANCE
+                            </span>
+
+                            <h3>
+                                Spend overview
+                            </h3>
+
+                        </div>
+
+
+                        <select
+                            id="spendPeriod"
+                            class="period-select">
+
+                            <option value="6">
+                                Last 6 months
+                            </option>
+
+                            <option value="12">
+                                Last 12 months
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="spend-summary">
+
+                        <strong>
+                            ₹68.95Cr
+                        </strong>
+
+                        <span class="positive">
+                            ↗ 8.4%
+                        </span>
+
+                    </div>
+
+
+                    <div class="chart-container">
+
+                        <div class="chart-y-axis">
+
+                            <span>₹80Cr</span>
+                            <span>₹60Cr</span>
+                            <span>₹40Cr</span>
+                            <span>₹20Cr</span>
+                            <span>₹0</span>
+
+                        </div>
+
+
+                        <div class="chart-area">
+
+                            <div class="chart-grid-lines">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+
+                            <svg
+                                class="spend-chart"
+                                viewBox="0 0 700 260"
+                                preserveAspectRatio="none">
+
+                                <defs>
+
+                                    <linearGradient
+                                        id="spendGradient"
+                                        x1="0"
+                                        y1="0"
+                                        x2="0"
+                                        y2="1">
+
+                                        <stop
+                                            offset="0%"
+                                            stop-color="#087f72"
+                                            stop-opacity=".24"
+                                        />
+
+                                        <stop
+                                            offset="100%"
+                                            stop-color="#087f72"
+                                            stop-opacity="0"
+                                        />
+
+                                    </linearGradient>
+
+                                </defs>
+
+
+                                <path
+                                    class="chart-area-fill"
+                                    d="
+                                        M0 205
+                                        C80 185 90 155 140 172
+                                        C190 188 210 145 260 150
+                                        C320 157 340 105 390 120
+                                        C450 138 465 82 520 94
+                                        C575 105 610 62 700 55
+                                        L700 260
+                                        L0 260 Z
+                                    "
+                                />
+
+
+                                <path
+                                    class="chart-line-path"
+                                    d="
+                                        M0 205
+                                        C80 185 90 155 140 172
+                                        C190 188 210 145 260 150
+                                        C320 157 340 105 390 120
+                                        C450 138 465 82 520 94
+                                        C575 105 610 62 700 55
+                                    "
+                                />
+
+                            </svg>
+
+
+                            <div class="chart-x-axis">
+
+                                <span>Mar</span>
+                                <span>Apr</span>
+                                <span>May</span>
+                                <span>Jun</span>
+                                <span>Jul</span>
+                                <span>Aug</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- APPROVALS -->
+
+                <article class="dashboard-card approvals-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                ACTION REQUIRED
+                            </span>
+
+                            <h3>
+                                Pending approvals
+                            </h3>
+
+                        </div>
+
+                        <a href="#" class="view-link">
+                            View all →
+                        </a>
+
+                    </div>
+
+
+                    <div class="approval-total">
+
+                        <strong>27</strong>
+
+                        <span>
+                            requests waiting
+                        </span>
+
+                    </div>
+
+
+                    <div class="approval-list">
+
+
+                        <div class="approval-item">
+
+                            <span class="approval-item-icon">
+                                PO
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    PO-2026-0842
+                                </strong>
+
+                                <small>
+                                    Office supplies · ₹4.8L
+                                </small>
+
+                            </div>
+
+                            <span class="approval-status urgent">
+                                Urgent
+                            </span>
+
+                        </div>
+
+
+                        <div class="approval-item">
+
+                            <span class="approval-item-icon">
+                                RF
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    RFQ-2026-0198
+                                </strong>
+
+                                <small>
+                                    IT hardware · ₹12.4L
+                                </small>
+
+                            </div>
+
+                            <span class="approval-status">
+                                Today
+                            </span>
+
+                        </div>
+
+
+                        <div class="approval-item">
+
+                            <span class="approval-item-icon">
+                                PR
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    PR-2026-0341
+                                </strong>
+
+                                <small>
+                                    Facilities · ₹2.1L
+                                </small>
+
+                            </div>
+
+                            <span class="approval-status">
+                                Today
+                            </span>
+
+                        </div>
+
+
+                        <div class="approval-item">
+
+                            <span class="approval-item-icon">
+                                PO
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    PO-2026-0819
+                                </strong>
+
+                                <small>
+                                    Raw materials · ₹8.7L
+                                </small>
+
+                            </div>
+
+                            <span class="approval-status">
+                                2d
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- =============================================
+                 SECOND ROW
+                 ============================================= -->
+
+            <section class="dashboard-grid second-row">
+
+
+                <!-- SUPPLIER PERFORMANCE -->
+
+                <article class="dashboard-card supplier-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                SUPPLIER HEALTH
+                            </span>
+
+                            <h3>
+                                Supplier performance
+                            </h3>
+
+                        </div>
+
+                        <a href="#" class="view-link">
+                            View suppliers →
+                        </a>
+
+                    </div>
+
+
+                    <div class="supplier-score">
+
+                        <div class="score-circle">
+
+                            <strong>
+                                96.4
+                            </strong>
+
+                            <span>
+                                /100
+                            </span>
+
+                        </div>
+
+
+                        <div class="score-details">
+
+                            <div class="score-row">
+
+                                <span>
+                                    Quality
+                                </span>
+
+                                <div class="mini-progress">
+                                    <span style="width: 97%"></span>
+                                </div>
+
+                                <strong>
+                                    97%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="score-row">
+
+                                <span>
+                                    Delivery
+                                </span>
+
+                                <div class="mini-progress">
+                                    <span style="width: 94%"></span>
+                                </div>
+
+                                <strong>
+                                    94%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="score-row">
+
+                                <span>
+                                    Compliance
+                                </span>
+
+                                <div class="mini-progress">
+                                    <span style="width: 98%"></span>
+                                </div>
+
+                                <strong>
+                                    98%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- RECENT ACTIVITY -->
+
+                <article class="dashboard-card activity-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                ACTIVITY
+                            </span>
+
+                            <h3>
+                                Recent activity
+                            </h3>
+
+                        </div>
+
+                        <a href="#" class="view-link">
+                            View all →
+                        </a>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+
+                        <div class="activity-item">
+
+                            <span class="activity-dot green"></span>
+
+                            <div>
+
+                                <strong>
+                                    Purchase order approved
+                                </strong>
+
+                                <small>
+                                    PO-2026-0842 · 12 minutes ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <span class="activity-dot blue"></span>
+
+                            <div>
+
+                                <strong>
+                                    New supplier onboarded
+                                </strong>
+
+                                <small>
+                                    Vertex Industrial Supplies · 1h ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <span class="activity-dot gold"></span>
+
+                            <div>
+
+                                <strong>
+                                    RFQ received 6 bids
+                                </strong>
+
+                                <small>
+                                    RFQ-2026-0198 · 2h ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <span class="activity-dot purple"></span>
+
+                            <div>
+
+                                <strong>
+                                    Contract nearing expiry
+                                </strong>
+
+                                <small>
+                                    CNT-2025-0412 · 3h ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- =============================================
+                 QUICK ACTIONS
+                 ============================================= -->
+
+            <section class="quick-section">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span>
+                            PROCUREMENT WORKSPACE
+                        </span>
+
+                        <h3>
+                            Quick actions
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+
+                    <a href="#" class="quick-card">
+
+                        <span class="quick-icon teal">
+                            ↗
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Create RFQ
+                            </strong>
+
+                            <small>
+                                Start a sourcing event
+                            </small>
+
+                        </div>
+
+                        <span class="quick-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="quick-card">
+
+                        <span class="quick-icon blue">
+                            +
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Create requisition
+                            </strong>
+
+                            <small>
+                                Request a purchase
+                            </small>
+
+                        </div>
+
+                        <span class="quick-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="quick-card">
+
+                        <span class="quick-icon gold">
+                            ◎
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Add supplier
+                            </strong>
+
+                            <small>
+                                Onboard a new supplier
+                            </small>
+
+                        </div>
+
+                        <span class="quick-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="quick-card">
+
+                        <span class="quick-icon purple">
+                            ◈
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                View analytics
+                            </strong>
+
+                            <small>
+                                Explore spend insights
+                            </small>
+
+                        </div>
+
+                        <span class="quick-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <footer class="dashboard-footer">
+
+            <span>
+                Sourcing &amp; Procurement
+            </span>
+
+            <span>
+                © 2026
+            </span>
+
+        </footer>
+
+    </div>
+
+</div>
+
+
+<!-- MOBILE OVERLAY -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay">
+</div>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -37,6 +37,7 @@ public class SystemTransformer {
                 .twoFactorEnabled(false)
                 .failedLoginAttempts(0)
                 .accountLocked(false)
+                .profileImageUrl(SystemConstant.DEFAULT_PROFILE_PIC_URL)
                 .preferredLanguage("en")
                 .preferredCurrency("INR")
                 .currency("INR")

@@ -5,4 +5,5 @@ public class SystemConstant {
     public final static Integer MAIL_RETRY_ATTEMPT = 3;
     public final static Long JWT_TOKEN_EXPIRATION_TIME = 1_800_000L;
     public final static String JWT_SECRET_PASSWORD = "bckebckebckbekbcjebcjbfjrbvbrjbjkbcsbcjbejbekbfkefbejfbefbvejfbvejbfjbefjerbf";
+    public final static String DEFAULT_PROFILE_PIC_URL = "https://lh3.googleusercontent.com/a/ACg8ocIMlEtjC-zO2cAoRelysj0GEVwschrLVSmP6QYDlmm4d5iQuUBw=s576-c-no";
 }
